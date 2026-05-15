@@ -57,6 +57,12 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
+      background: transparent;
+      border-bottom: none;
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    nav.scrolled {
       background: rgba(247, 244, 238, 0.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(27, 58, 92, 0.08);
@@ -72,17 +78,56 @@
     }
 
     .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+    }
+
+    .nav-monogram {
+      width: 28px;
+      height: 28px;
+      background: var(--navy);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--cream);
+      flex-shrink: 0;
+    }
+
+    .nav-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
       font-weight: 400;
       letter-spacing: 0.08em;
       color: var(--navy);
-      text-decoration: none;
+    }
+
+    /* hairline rule bridging nav → hero eyebrow */
+    .nav-hairline {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-hairline::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--blue);
+      opacity: 0.6;
     }
 
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      align-items: center;
+      gap: 2rem;
       list-style: none;
     }
 
@@ -97,6 +142,26 @@
     }
 
     .nav-links a:hover { color: var(--navy); }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45rem 1.1rem;
+      border: 1px solid rgba(27, 58, 92, 0.35);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy) !important;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: rgba(27, 58, 92, 0.06);
+      border-color: var(--navy);
+    }
 
     /* ── HERO ── */
     .hero {
@@ -902,16 +967,19 @@
 <body>
 
   <!-- NAV -->
-  <nav>
+  <nav id="main-nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo" onclick="showMain(); return false;">Maegan Clark</a>
+      <a href="#" class="nav-logo" onclick="showMain(); return false;">
+        <span class="nav-monogram">MC</span>
+        <span class="nav-name">Maegan Clark</span>
+      </a>
       <ul class="nav-links">
-        <li><a href="#" id="nav-home" class="nav-active" onclick="showMain(); return false;">Home</a></li>
+        <li class="nav-hairline"><a href="#" id="nav-home" class="nav-active" onclick="showMain(); return false;">Home</a></li>
         <li><a href="#about" onclick="showMain();">About</a></li>
         <li><a href="#work" onclick="showMain();">Work</a></li>
         <li><a href="#probono" onclick="showMain();">Pro Bono</a></li>
         <li><a href="#" id="nav-links" onclick="showLinks(); return false;">Links</a></li>
-        <li><a href="#connect" onclick="showMain();">Connect</a></li>
+        <li><a href="#connect" onclick="showMain();" class="nav-cta">Let's connect</a></li>
       </ul>
     </div>
   </nav>
@@ -1108,6 +1176,12 @@
   </div><!-- /#links-page -->
 
   <script>
+    // ── Nav scroll state ──
+    const mainNav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      mainNav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
     // ── Page switching ──
     function showMain() {
       document.getElementById('main-site').classList.remove('hidden');
