@@ -17,11 +17,15 @@
   <meta property="og:title" content="Maegan Clark | Digital Marketing Strategist & Content Creator" />
   <meta property="og:description" content="20+ years of digital strategy for good. Senior Director of Digital Marketing at Heifer International, founder of Rare Gem Media, and creator behind Southern Blondie." />
   <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/mlclark04/maegan-clark/main/MaeganClark_SocialShare.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Maegan Clark | Digital Marketing Strategist & Content Creator" />
   <meta name="twitter:description" content="20+ years of digital strategy for good. Senior Director of Digital Marketing at Heifer International, founder of Rare Gem Media, and creator behind Southern Blondie." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/mlclark04/maegan-clark/main/MaeganClark_SocialShare.png" />
 
   <!-- Robots -->
   <meta name="robots" content="index, follow" />
@@ -57,12 +61,6 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      background: transparent;
-      border-bottom: none;
-      transition: background 0.3s, border-color 0.3s;
-    }
-
-    nav.scrolled {
       background: rgba(247, 244, 238, 0.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(27, 58, 92, 0.08);
@@ -77,57 +75,20 @@
       align-items: center;
     }
 
+    .nav-hamburger { display: none; }
+
     .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-      text-decoration: none;
-    }
-
-    .nav-monogram {
-      width: 28px;
-      height: 28px;
-      background: var(--navy);
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 0.75rem;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      color: var(--cream);
-      flex-shrink: 0;
-    }
-
-    .nav-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
+      font-size: 1.35rem;
       font-weight: 400;
       letter-spacing: 0.08em;
       color: var(--navy);
-    }
-
-    /* hairline rule bridging nav → hero eyebrow */
-    .nav-hairline {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .nav-hairline::before {
-      content: '';
-      display: block;
-      width: 32px;
-      height: 1px;
-      background: var(--blue);
-      opacity: 0.6;
+      text-decoration: none;
     }
 
     .nav-links {
       display: flex;
-      align-items: center;
-      gap: 2rem;
+      gap: 2.5rem;
       list-style: none;
     }
 
@@ -143,26 +104,6 @@
 
     .nav-links a:hover { color: var(--navy); }
 
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.45rem 1.1rem;
-      border: 1px solid rgba(27, 58, 92, 0.35);
-      border-radius: 999px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--navy) !important;
-      text-decoration: none;
-      transition: background 0.2s, border-color 0.2s;
-    }
-
-    .nav-cta:hover {
-      background: rgba(27, 58, 92, 0.06);
-      border-color: var(--navy);
-    }
-
     /* ── HERO ── */
     .hero {
       min-height: 100vh;
@@ -172,6 +113,7 @@
       padding: 8rem 3rem 4rem;
       position: relative;
       overflow: hidden;
+      background: var(--cream);
     }
 
     .hero::before {
@@ -947,7 +889,6 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      nav { padding: 1rem 1.5rem; }
       .nav-links { gap: 1.5rem; }
       .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; }
       .hero-visual { justify-content: flex-start; margin-top: 3rem; }
@@ -962,24 +903,85 @@
       .footer { flex-direction: column; gap: 2rem; align-items: flex-start; padding: 3rem 1.5rem; }
       .footer-links { align-items: flex-start; }
     }
+
+    @media (max-width: 640px) {
+      .nav-inner { padding: 0.9rem 1.25rem; }
+
+      .hero {
+        min-height: unset;
+        padding: 6rem 1.25rem 3rem;
+      }
+
+      .hero-visual { display: none; }
+
+      .about {
+        grid-template-columns: 1fr !important;
+        padding: 3rem 1.25rem !important;
+        gap: 2rem !important;
+      }
+
+      .about-left { display: none; }
+
+      .hero-frame-accent { display: none; }
+
+      .nav-hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+      }
+
+      .nav-hamburger span {
+        display: block;
+        width: 22px;
+        height: 1.5px;
+        background: var(--navy);
+        transition: all 0.3s;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        background: rgba(247, 244, 238, 0.98);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        gap: 0;
+        padding: 0.5rem 0 1rem;
+        border-bottom: 1px solid rgba(27,58,92,0.1);
+        box-shadow: 0 8px 24px rgba(27,58,92,0.08);
+      }
+
+      .nav-links.open { display: flex; }
+
+      .nav-links li a {
+        display: block;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.8rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <!-- NAV -->
-  <nav id="main-nav">
+  <nav>
     <div class="nav-inner">
-      <a href="#" class="nav-logo" onclick="showMain(); return false;">
-        <span class="nav-monogram">MC</span>
-        <span class="nav-name">Maegan Clark</span>
-      </a>
-      <ul class="nav-links">
-        <li class="nav-hairline"><a href="#" id="nav-home" class="nav-active" onclick="showMain(); return false;">Home</a></li>
+      <a href="#" class="nav-logo" onclick="showMain(); return false;">Maegan Clark</a>
+      <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#" id="nav-home" class="nav-active" onclick="showMain(); return false;">Home</a></li>
         <li><a href="#about" onclick="showMain();">About</a></li>
         <li><a href="#work" onclick="showMain();">Work</a></li>
         <li><a href="#probono" onclick="showMain();">Pro Bono</a></li>
         <li><a href="#" id="nav-links" onclick="showLinks(); return false;">Links</a></li>
-        <li><a href="#connect" onclick="showMain();" class="nav-cta">Let's connect</a></li>
+        <li><a href="#connect" onclick="showMain();">Connect</a></li>
       </ul>
     </div>
   </nav>
@@ -1176,13 +1178,18 @@
   </div><!-- /#links-page -->
 
   <script>
-    // ── Nav scroll state ──
-    const mainNav = document.getElementById('main-nav');
-    window.addEventListener('scroll', () => {
-      mainNav.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
-
     // ── Page switching ──
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('open');
+    }
+
+    // Close menu when a nav link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.remove('open');
+      });
+    });
+
     function showMain() {
       document.getElementById('main-site').classList.remove('hidden');
       document.getElementById('links-page').classList.remove('active');
