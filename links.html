@@ -3,23 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Maegan Clark — Links</title>
-  <meta name="description" content="Maegan Clark's links — Amazon Storefront, ShopMy, Southern Blondie, and more." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://maeganclark.com/links" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://maeganclark.com/links" />
-  <meta property="og:title" content="Maegan Clark — Links" />
-  <meta property="og:description" content="Everything in one place — shop my picks, read the blog, and find me everywhere." />
-  <meta property="og:image" content="https://maeganclark.com/headshot.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://maeganclark.com/headshot.jpg" />
-  <meta name="theme-color" content="#1B3A5C" />
-
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjMUIzQTVDIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1NCUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICBmb250LWZhbWlseT0iR2VvcmdpYSwgc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtd2VpZ2h0PSI0MDAiCiAgICBsZXR0ZXItc3BhY2luZz0iMSIgZmlsbD0iI0Y3RjRFRSI+TUM8L3RleHQ+Cjwvc3ZnPg==" />
-  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj48cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgZmlsbD0iIzFCM0E1QyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTQlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSI3MiIgZm9udC13ZWlnaHQ9IjQwMCIgbGV0dGVyLXNwYWNpbmc9IjQiIGZpbGw9IiNGN0Y0RUUiPk1DPC90ZXh0Pjwvc3ZnPg==" />
+  <title>Maegan Clark | Links</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF678KCQT"></script>
@@ -30,425 +18,251 @@
     gtag('config', 'G-0NF678KCQT');
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root {
-      --navy: #1B3A5C;
-      --navy-deep: #112640;
-      --blue: #5B8DB8;
-      --blue-light: #A8C4DC;
-      --cream: #F7F4EE;
-      --cream-dark: #EDE9E0;
-      --text: #1B3A5C;
-      --text-muted: #5B7A96;
-    }
-
     body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--text);
       min-height: 100vh;
+      background: #f5f0eb;
+      font-family: 'Inter', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 3rem 1.25rem 4rem;
+      padding: 48px 20px 64px;
     }
 
-    /* ── PROFILE ── */
-    .profile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 2.5rem;
-      animation: fadeUp 0.7s ease both;
-    }
-
-    .avatar-wrap {
-      position: relative;
-      width: 128px;
-      height: 128px;
-      margin-bottom: 1.25rem;
-    }
-
-    .avatar-wrap img {
-      width: 128px;
-      height: 128px;
+    .avatar {
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
       object-fit: cover;
-      object-position: top;
-      border: 3px solid white;
-      box-shadow: 0 4px 20px rgba(27,58,92,0.15);
-      display: block;
+      border: 3px solid #fff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      margin-bottom: 16px;
     }
 
-    .avatar-ring {
-      position: absolute;
-      inset: -5px;
-      border-radius: 50%;
-      background: conic-gradient(var(--blue) 0%, var(--blue-light) 40%, var(--navy) 100%);
-      z-index: -1;
-      opacity: 0.7;
+    .name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-bottom: 4px;
+      text-align: center;
     }
 
-    .profile-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.9rem;
-      font-weight: 400;
-      color: var(--navy);
-      line-height: 1.1;
-      letter-spacing: 0.01em;
-      margin-bottom: 0.5rem;
+    .tagline {
+      font-size: 0.875rem;
+      color: #6b6b7b;
+      margin-bottom: 24px;
+      text-align: center;
     }
 
-    .profile-name em {
-      font-style: italic;
-      color: var(--blue);
-    }
-
-    .profile-handle {
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-
-    .profile-bio {
-      font-size: 0.88rem;
-      line-height: 1.65;
-      color: var(--text-muted);
-      font-weight: 300;
-      max-width: 340px;
-    }
-
-    /* ── SOCIALS ── */
     .socials {
       display: flex;
-      gap: 0.75rem;
-      margin: 1.25rem 0 2.5rem;
-      animation: fadeUp 0.7s 0.1s ease both;
+      gap: 16px;
+      margin-bottom: 36px;
     }
 
     .social-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #fff;
+      border: none;
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: white;
-      border: 1.5px solid rgba(27,58,92,0.12);
-      color: var(--navy);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
       text-decoration: none;
-      transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
-      box-shadow: 0 2px 8px rgba(27,58,92,0.06);
     }
 
     .social-btn:hover {
-      background: var(--navy);
-      border-color: var(--navy);
-      color: white;
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.14);
     }
 
-    .social-btn svg {
-      width: 18px;
-      height: 18px;
-    }
+    .social-btn svg { width: 20px; height: 20px; }
 
-    /* ── DIVIDER LABEL ── */
-    .section-divider {
+    .links-list {
       width: 100%;
-      max-width: 420px;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin: 0.5rem 0 1rem;
-      animation: fadeUp 0.7s 0.15s ease both;
-    }
-
-    .section-divider::before,
-    .section-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: rgba(27,58,92,0.12);
-    }
-
-    .section-divider span {
-      font-size: 0.62rem;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      white-space: nowrap;
-    }
-
-    /* ── LINK STACK ── */
-    .link-stack {
-      width: 100%;
-      max-width: 420px;
+      max-width: 480px;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 12px;
     }
 
-    /* Primary link button */
-    .link-btn {
+    .link-card {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      width: 100%;
-      padding: 1rem 1.25rem;
-      text-decoration: none;
+      gap: 14px;
+      background: #fff;
       border-radius: 14px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      position: relative;
-      overflow: hidden;
+      padding: 16px 20px;
+      text-decoration: none;
+      color: #1a1a2e;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.4s ease forwards;
     }
 
-    .link-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 32px rgba(27,58,92,0.14);
+    .link-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
 
-    .link-btn:active { transform: translateY(0); }
-
-    .link-btn.style-navy {
-      background: var(--navy);
-      box-shadow: 0 4px 16px rgba(27,58,92,0.18);
-    }
-
-    .link-btn.style-white {
-      background: white;
-      border: 1.5px solid rgba(27,58,92,0.1);
-      box-shadow: 0 2px 12px rgba(27,58,92,0.07);
-    }
-
-    .link-btn.style-blue {
-      background: var(--blue);
-      box-shadow: 0 4px 16px rgba(91,141,184,0.25);
-    }
-
-    .link-btn-icon {
-      width: 40px;
-      height: 40px;
+    .link-icon {
+      width: 42px;
+      height: 42px;
       border-radius: 10px;
+      background: #f5f0eb;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 1.25rem;
       flex-shrink: 0;
-      font-size: 1.1rem;
     }
 
-    .style-navy .link-btn-icon { background: rgba(255,255,255,0.12); }
-    .style-white .link-btn-icon { background: var(--cream-dark); }
-    .style-blue .link-btn-icon { background: rgba(255,255,255,0.2); }
+    .link-icon svg { width: 22px; height: 22px; }
 
-    .link-btn-text { flex: 1; }
+    .link-text { flex: 1; }
 
-    .link-btn-label {
-      font-size: 0.62rem;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      margin-bottom: 0.15rem;
-    }
-
-    .style-navy .link-btn-label { color: var(--blue-light); }
-    .style-white .link-btn-label { color: var(--blue); }
-    .style-blue .link-btn-label { color: rgba(255,255,255,0.75); }
-
-    .link-btn-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 400;
+    .link-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
       line-height: 1.2;
     }
 
-    .style-navy .link-btn-title { color: white; }
-    .style-white .link-btn-title { color: var(--navy); }
-    .style-blue .link-btn-title { color: white; }
-
-    .link-btn-desc {
+    .link-label {
       font-size: 0.75rem;
-      font-weight: 300;
-      line-height: 1.4;
-      margin-top: 0.2rem;
+      color: #6b6b7b;
+      margin-top: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
-    .style-navy .link-btn-desc { color: rgba(255,255,255,0.55); }
-    .style-white .link-btn-desc { color: var(--text-muted); }
-    .style-blue .link-btn-desc { color: rgba(255,255,255,0.7); }
-
-    .link-btn-arrow {
-      font-size: 0.9rem;
-      flex-shrink: 0;
-      transition: transform 0.2s;
-    }
-
-    .style-navy .link-btn-arrow { color: rgba(255,255,255,0.4); }
-    .style-white .link-btn-arrow { color: var(--blue-light); }
-    .style-blue .link-btn-arrow { color: rgba(255,255,255,0.5); }
-
-    .link-btn:hover .link-btn-arrow { transform: translateX(4px); }
-
-    /* staggered animation */
-    .link-btn { animation: fadeUp 0.6s ease both; }
-    .link-btn:nth-child(1) { animation-delay: 0.15s; }
-    .link-btn:nth-child(2) { animation-delay: 0.22s; }
-    .link-btn:nth-child(3) { animation-delay: 0.29s; }
-    .link-btn:nth-child(4) { animation-delay: 0.36s; }
-    .link-btn:nth-child(5) { animation-delay: 0.43s; }
-    .link-btn:nth-child(6) { animation-delay: 0.50s; }
-
-    .section-divider { animation: fadeUp 0.6s ease both; }
-    .section-divider:nth-of-type(1) { animation-delay: 0.12s; }
-    .section-divider:nth-of-type(2) { animation-delay: 0.38s; }
-
-    /* ── FOOTER ── */
-    .page-footer {
-      margin-top: 3rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      animation: fadeUp 0.6s 0.55s ease both;
-    }
-
-    .page-footer a {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.95rem;
-      font-weight: 300;
-      color: var(--text-muted);
-      text-decoration: none;
-      letter-spacing: 0.06em;
-      transition: color 0.2s;
-    }
-
-    .page-footer a:hover { color: var(--navy); }
-
-    .page-footer-copy {
-      font-size: 0.68rem;
-      color: rgba(27,58,92,0.3);
-      letter-spacing: 0.08em;
+    .link-arrow {
+      color: #b0a898;
+      font-size: 1.1rem;
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .loading {
+      color: #b0a898;
+      font-size: 0.9rem;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <!-- PROFILE -->
-  <div class="profile">
-    <div class="avatar-wrap">
-      <div class="avatar-ring"></div>
-      <img src="headshot-circle.jpg" alt="Maegan Clark" />
-    </div>
-    <h1 class="profile-name">Maegan <em>Clark</em></h1>
-<p class="profile-bio">Digital marketing strategist, creative founder & working mom. Making it all make sense — one link at a time.</p>
+  <img src="headshot-circle.jpg" alt="Maegan Clark" class="avatar" />
+  <h1 class="name">Maegan Clark</h1>
+  <p class="tagline">Digital Marketing · Southern Blondie · Rare Gem Media</p>
+
+  <div class="socials">
+    <a href="https://www.instagram.com/southern.blondie/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#C13584" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="#C13584" stroke="none"/>
+      </svg>
+    </a>
+    <a href="https://www.tiktok.com/@southern.blondie" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+      </svg>
+    </a>
+    <a href="https://www.pinterest.com/southernblondie/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Pinterest">
+      <svg viewBox="0 0 24 24" fill="#E60023" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.62-.31-1.55c0-1.45.84-2.54 1.88-2.54.89 0 1.32.67 1.32 1.47 0 .89-.57 2.24-.86 3.48-.25 1.04.51 1.88 1.53 1.88 1.83 0 3.24-1.93 3.24-4.72 0-2.47-1.78-4.19-4.31-4.19-2.94 0-4.66 2.2-4.66 4.48 0 .89.34 1.84.77 2.36.08.1.09.19.07.29-.08.32-.25 1.04-.28 1.18-.04.19-.14.23-.32.14-1.25-.58-2.03-2.42-2.03-3.89 0-3.15 2.29-6.05 6.61-6.05 3.47 0 6.16 2.47 6.16 5.78 0 3.45-2.17 6.22-5.19 6.22-1.01 0-1.97-.53-2.3-1.15l-.62 2.33c-.23.87-.84 1.96-1.25 2.62.94.29 1.94.45 2.97.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/maeganclark/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.37 4.26 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+      </svg>
+    </a>
   </div>
 
-  <!-- SOCIAL ICONS -->
-  <div class="socials" aria-label="Social media links">
-    <a href="https://www.instagram.com/maeganclark" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
-    </a>
-    <a href="https://www.tiktok.com/@hey.maegan" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
-    </a>
-    <a href="https://www.pinterest.com/maeganclark/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Pinterest">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.16 1.22-5.16s-.31-.62-.31-1.54c0-1.45.84-2.53 1.88-2.53.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.48-.25 1.04.52 1.89 1.54 1.89 1.85 0 3.09-2.38 3.09-5.2 0-2.14-1.44-3.75-4.05-3.75-2.95 0-4.78 2.21-4.78 4.67 0 .85.25 1.44.64 1.9.18.21.2.29.14.53-.05.17-.15.59-.2.75-.06.24-.25.33-.46.24-1.3-.53-1.9-1.96-1.9-3.56 0-2.65 2.23-5.83 6.64-5.83 3.55 0 5.89 2.57 5.89 5.33 0 3.65-2.02 6.38-4.99 6.38-1 0-1.93-.54-2.25-1.14l-.62 2.37c-.22.87-.83 1.96-1.24 2.62.93.29 1.93.45 2.96.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
-    </a>
-    <a href="https://linkedin.com/in/maeganclark" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-    </a>
+  <div class="links-list" id="links-list">
+    <p class="loading">Loading links…</p>
   </div>
 
-  <!-- SHOP & CONTENT LINKS -->
-  <div class="link-stack">
+  <script>
+    const SHEET_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQHvYHhjWVdIugqzZ4xyG5bOUadzz2m1A9Ca4PK0KRBxoDNQT8w6n7eg2jkS9Nu0u7g9SwZRNTUa74z/pub?output=csv';
 
-    <div class="section-divider"><span>Shop My Picks</span></div>
+    const ICONS = {
+      amazon: '🛒',
+      shopmy: '👗',
+      blog: `<svg viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
+      website: `<span style="font-family:'Playfair Display',serif;font-weight:600;font-size:1rem;color:#1a1a2e;letter-spacing:-0.02em;">MC</span>`,
+      agency: `<svg viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+      'collabs & inquiries': '✉️',
+    };
 
-    <a href="https://a.co/d/08cINWlB" target="_blank" rel="noopener noreferrer" class="link-btn style-white">
-      <div class="link-btn-icon">🛒</div>
-      <div class="link-btn-text">
-        <div class="link-btn-label">Amazon</div>
-        <div class="link-btn-title">My Amazon Storefront</div>
-        <div class="link-btn-desc">Real picks for real life — kids, chaos & everything I swear by</div>
-      </div>
-      <span class="link-btn-arrow">→</span>
-    </a>
+    function getIcon(label) {
+      return ICONS[label.toLowerCase()] || '🔗';
+    }
 
-    <a href="https://shopmy.us/shop/maeganclark" target="_blank" rel="noopener noreferrer" class="link-btn style-white">
-      <div class="link-btn-icon">👗</div>
-      <div class="link-btn-text">
-        <div class="link-btn-label">ShopMy</div>
-        <div class="link-btn-title">Shop My Style</div>
-        <div class="link-btn-desc">Outfits built for doing it all — meetings, school pickup & everything after</div>
-      </div>
-      <span class="link-btn-arrow">→</span>
-    </a>
+    function parseCSV(text) {
+      const lines = text.trim().split('\n');
+      const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+      return lines.slice(1).map(line => {
+        const values = [];
+        let current = '';
+        let inQuotes = false;
+        for (let i = 0; i < line.length; i++) {
+          if (line[i] === '"') { inQuotes = !inQuotes; }
+          else if (line[i] === ',' && !inQuotes) { values.push(current.trim()); current = ''; }
+          else { current += line[i]; }
+        }
+        values.push(current.trim());
+        return Object.fromEntries(headers.map((h, i) => [h, values[i] || '']));
+      });
+    }
 
-    <div class="section-divider"><span>Read & Follow</span></div>
+    async function loadLinks() {
+      const container = document.getElementById('links-list');
+      try {
+        const res = await fetch(SHEET_CSV);
+        const csv = await res.text();
+        const rows = parseCSV(csv);
+        const active = rows.filter(r => r.Active && r.Active.toUpperCase() !== 'FALSE');
 
-    <a href="https://www.southernblondie.com" target="_blank" rel="noopener noreferrer" class="link-btn style-white">
-      <div class="link-btn-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;color:var(--navy);"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-      <div class="link-btn-text">
-        <div class="link-btn-label">Blog</div>
-        <div class="link-btn-title">Southern Blondie</div>
-        <div class="link-btn-desc">Life, style, food & the beautiful mess of doing it all</div>
-      </div>
-      <span class="link-btn-arrow">→</span>
-    </a>
+        container.innerHTML = '';
+        active.forEach((row, i) => {
+          const icon = getIcon(row.Label || '');
+          const card = document.createElement('a');
+          card.href = row.URL || '#';
+          card.className = 'link-card';
+          card.style.animationDelay = `${i * 80}ms`;
+          if (row.URL && !row.URL.startsWith('mailto:')) {
+            card.target = '_blank';
+            card.rel = 'noopener noreferrer';
+          }
+          card.innerHTML = `
+            <div class="link-icon">${icon}</div>
+            <div class="link-text">
+              <div class="link-title">${row.Title || ''}</div>
+              ${row.Label ? `<div class="link-label">${row.Label}</div>` : ''}
+            </div>
+            <div class="link-arrow">›</div>
+          `;
+          container.appendChild(card);
+        });
+      } catch (e) {
+        container.innerHTML = '<p class="loading">Could not load links. Please try again.</p>';
+      }
+    }
 
-    <a href="https://maeganclark.com" class="link-btn style-white">
-      <div class="link-btn-icon" style="background:var(--navy);font-family:'Cormorant Garamond',serif;font-size:0.75rem;font-weight:400;letter-spacing:0.06em;color:var(--cream);border-radius:6px;">MC</div>
-      <div class="link-btn-text">
-        <div class="link-btn-label">Website</div>
-        <div class="link-btn-title">maeganclark.com</div>
-        <div class="link-btn-desc">Work, strategy & the full story</div>
-      </div>
-      <span class="link-btn-arrow">→</span>
-    </a>
-
-    <a href="https://raregemmedia.com" target="_blank" rel="noopener noreferrer" class="link-btn style-white">
-      <div class="link-btn-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" style="width:26px;height:26px;"><polygon points="20,2 36,14 36,26 20,38 4,26 4,14" fill="none" stroke="#9B1F30" stroke-width="1"/><polygon points="20,2 36,14 20,16" fill="rgba(29,102,71,0.6)"/><polygon points="20,2 4,14 20,16" fill="rgba(14,51,34,0.45)"/><polygon points="4,14 36,14 20,16" fill="rgba(242,239,233,0.5)"/><polygon points="4,14 20,16 20,38" fill="rgba(14,51,34,0.65)"/><polygon points="36,14 20,16 20,38 36,26" fill="rgba(29,102,71,0.45)"/></svg></div>
-      <div class="link-btn-text">
-        <div class="link-btn-label">Agency</div>
-        <div class="link-btn-title">Rare Gem Media</div>
-        <div class="link-btn-desc">Digital strategy & creative services for mission-driven brands</div>
-      </div>
-      <span class="link-btn-arrow">→</span>
-    </a>
-
-    <a href="mailto:hey.maeganclark@gmail.com?subject=Collab%20%26%20Inquiry" class="link-btn style-white">
-      <div class="link-btn-icon">✉️</div>
-      <div class="link-btn-text">
-        <div class="link-btn-label">Collabs & inquiries</div>
-        <div class="link-btn-title">Get in Touch</div>
-        <div class="link-btn-desc">hey.maeganclark@gmail.com</div>
-      </div>
-      <span class="link-btn-arrow">→</span>
-    </a>
-
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="page-footer">
-    <a href="https://maeganclark.com">maeganclark.com</a>
-    <p class="page-footer-copy">© 2026 Maegan Clark · Little Rock, AR</p>
-  </footer>
+    loadLinks();
+  </script>
 
 </body>
 </html>
