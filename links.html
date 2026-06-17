@@ -147,9 +147,6 @@
   </div>
 
   <script>
-    const SHEET_ID = '1iKeamsUBU8DIXbHgrNJQzurIqLSDbKV3c3s_mBXGysw';
-    const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`;
-
     const ICONS = {
       amazon: '🛒',
       shopmy: '👗',
@@ -163,18 +160,30 @@
       return ICONS[label.toLowerCase()] || '🔗';
     }
 
+    function parseCSV(text) {
+      const lines = text.trim().split('\n');
+      const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+      return lines.slice(1).map(line => {
+        const values = [];
+        let current = '';
+        let inQuotes = false;
+        for (let i = 0; i < line.length; i++) {
+          if (line[i] === '"') { inQuotes = !inQuotes; }
+          else if (line[i] === ',' && !inQuotes) { values.push(current.trim()); current = ''; }
+          else { current += line[i]; }
+        }
+        values.push(current.trim());
+        return Object.fromEntries(headers.map((h, i) => [h, values[i] || '']));
+      });
+    }
+
     async function loadLinks() {
       const container = document.getElementById('links-list');
       try {
-        const res = await fetch(SHEET_URL);
-        const text = await res.text();
-        const jsonStr = text.replace(/^[^(]+\(/, '').replace(/\);\s*$/, '');
-        const data = JSON.parse(jsonStr);
-        const cols = data.table.cols.map(c => c.label);
-        const rows = data.table.rows
-          .filter(r => r && r.c)
-          .map(r => Object.fromEntries(cols.map((col, i) => [col, r.c[i] && r.c[i].v != null ? String(r.c[i].v) : ''])));
-        const active = rows.filter(r => r.URL && r.Active.toLowerCase() !== 'false');
+        const res = await fetch('/api/links');
+        const csv = await res.text();
+        const rows = parseCSV(csv);
+        const active = rows.filter(r => r.URL && (!r.Active || r.Active.toLowerCase() !== 'false'));
 
         if (active.length === 0) {
           container.innerHTML = '<p class="status">No links found.</p>';
