@@ -1,4 +1,4 @@
-import https from 'https';
+const https = require('https');
 
 function fetchWithRedirect(url) {
   return new Promise((resolve, reject) => {
@@ -14,7 +14,7 @@ function fetchWithRedirect(url) {
   });
 }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   try {
     const csv = await fetchWithRedirect('https://docs.google.com/spreadsheets/d/1iKeamsUBU8DIXbHgrNJQzurIqLSDbKV3c3s_mBXGysw/pub?output=csv');
     res.setHeader('Cache-Control', 's-maxage=60');
